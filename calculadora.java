@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class calculadora {
    static String escolha;
    public static void main(String[]args){
-        try (var entrada = new Scanner(System.in)) {
+        Scanner entrada = new Scanner(System.in);
          do{
-         System.out.println(" ");
+           System.out.println(" ");
            System.out.println(" <<<<< Calculadora >>>>");
            System.out.println("");
            System.out.println("_______________________________________________");
@@ -19,7 +19,7 @@ public class calculadora {
            System.out.println("|| Digite o simbolo de uma opções desejadas: ||");
            System.out.println("||___________________________________________||");
            System.out.println("||___________________________________________||");
-           escolha = entrada.next();
+           escolha = entrada.nextLine();
 
   
            switch(escolha){
@@ -60,7 +60,8 @@ public class calculadora {
                      System.out.println("((( =>=>=>=> Opção inválida! <=<=<=<= )))");break;
 
            }
-   }while(escolha == "#");
-      }
+
+   }while(escolha != "#");
+      
     }
 }
